@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#main {
+  width: 360px;
+  height: 420px;
+  background-color: #edd98e;
+  border: 10px solid #000;
+  border-radius: 10px;
+  font: bold 20px "Courier";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#main > #stage {
+  width: 304px;
+  height: 304px;
+  border: 2px solid #000;
+  position: relative;
+}
+#main > #stage #snack div {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border: 1px solid #edd98e;
+  position: absolute;
+}
+#main > #stage #food {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#main > #stage #food div {
+  width: 4px;
+  height: 4px;
+  background-color: #000;
+}
+#main > #score-panel {
+  width: 304px;
+  display: flex;
+  justify-content: space-between;
+}

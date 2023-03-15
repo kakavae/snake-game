@@ -1,0 +1,62 @@
+@bg-color: #edd98e;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main {
+  width: 360px;
+  height: 420px;
+  background-color: @bg-color;
+  border: 10px solid #000;
+  border-radius: 10px;
+  font: bold 20px "Courier";
+  display: flex;
+  flex-direction: column; // 设置主轴方向为纵向排列
+  justify-content: space-around; // 设置主轴元素的排列方式
+  align-items: center; // 设置侧轴元素排列为居中(侧轴这时候是x轴)
+
+  &>#stage {
+    width: 304px;
+    height: 304px;
+    border: 2px solid #000;
+    position: relative;
+
+    #snack {
+      div {
+        width: 10px;
+        height: 10px;
+        background-color: #000;
+        border: 1px solid @bg-color;
+        position: absolute;
+      }
+    }
+
+    #food {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      display: flex;
+      flex-wrap: wrap; // 决定子元素是否换行
+      justify-content: space-around;
+
+      div {
+        width: 4px;
+        height: 4px;
+        background-color: #000;
+      }
+    }
+  }
+
+  &>#score-panel {
+    width: 304px; // 设置了宽度以后盒子模型才能撑开
+    display: flex;
+    justify-content: space-between;
+    // flex-direction: row;
+  }
+
+}
